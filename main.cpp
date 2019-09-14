@@ -1,4 +1,4 @@
-#include "exec.h"
+#include "Exec.h"
 
 int main() //main exists just to run exec.
 {

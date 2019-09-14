@@ -1,13 +1,13 @@
 #ifndef EXEC_H
 #define EXEC_H
-#include "map.h"
+#include "Map.h"
 #include <iostream>
 
 class exec
 {
   private:
-    map* playerOneMap;
-    map* playerTwoMap;
+    Map* playerOneMap;
+    Map* playerTwoMap;
   public:
     void run();
 };

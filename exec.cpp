@@ -1,5 +1,5 @@
-#include "exec.h"
-#include "map.h"
+#include "Exec.h"
+#include "Map.h"
 #include <iostream>
 
 void exec::run()

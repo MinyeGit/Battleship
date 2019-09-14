@@ -1,13 +1,13 @@
-#include "map.h"
-#include "ship.h"
+#include "Map.h"
+#include "Ship.h"
 #include <iostream>
 
-map::map(int shipNum)
+Map::Map(int shipNum)
 {
   //based on ship implemenation, perhaps ships could be placed in this function.
 }
 
-bool map::validPos(std::string pos)
+bool Map::validPos(std::string pos)
 {
   bool isValid = true;
   //check length is 2, if not then set bool to false.
@@ -16,17 +16,17 @@ bool map::validPos(std::string pos)
   return(isValid);
 }
 
-void map::printEnemyShotMap()
+void Map::printEnemyShotMap()
 {
     //cout with grid format but if a ship icon is seen, change to empty water. For opponent.
 }
 
-void map::printCurrentMap()
+void Map::printCurrentMap()
 {
   //cout with grid format untouched. For player
 }
 
-void map::incomingShot(std::string pos)
+void Map::incomingShot(std::string pos)
 {
   //Fired from opponent to players board. position should already have been checked, so just go through steps to place shot.
 }
@@ -38,7 +38,7 @@ bool gameOver()
   return(isOver);
 }
 
-map::~map()
+Map::~Map()
 {
 
 }
