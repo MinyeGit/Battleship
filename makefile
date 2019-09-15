@@ -1,17 +1,20 @@
-Battleship: main.o map.o ship.o exec.o
-	g++ -std=c++11 -g -Wall main.o map.o ship.o exec.o -o Battleship
+Battleship: BattleShip.o Cell.o Ship.o Board.o Player.o
+	g++ -std=c++11 -g -Wall BattleShip.o Cell.o Ship.o Board.o Player.o -o BattleShip
 
-main.o: main.cpp map.h
-	g++ -std=c++11 -g -Wall -c main.cpp
+BattleShip.o: BattleShip.cpp Ship.h Player.h Cell.h Board.h
+	g++ -std=c++11 -g -Wall -c BattleShip.cpp
 
-map.o: map.h map.cpp
-	g++ -std=c++11 -g -Wall -c map.cpp
+Ship.o: Cell.h Cell.cpp
+	g++ -std=c++11 -g -Wall -c Ship.cpp
 
-ship.o: ship.h ship.cpp
-	g++ -std=c++11 -g -Wall -c ship.cpp
+Player.o: Board.h Board.cpp Ship.h Ship.cpp Cell.h Cell.cpp
+	g++ -std=c++11 -g -Wall -c Player.cpp
 
-exec.o: exec.h exec.cpp
-	g++ -std=c++11 -g -Wall -c exec.cpp
+Board.o: global.h
+	g++ -std=c++11 -g -Wall -c Board.cpp
+
+Cell.o: global.h
+	g++ -std=c++11 -g -Wall -c Cell.cpp
 
 clean:
-	rm *.o Battleship
+	rm *.o BattleShip
